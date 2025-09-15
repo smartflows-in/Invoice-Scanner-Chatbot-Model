@@ -118,7 +118,7 @@ class InvoiceRAGPipeline:
         )
         generate_prompt = ChatPromptTemplate.from_template(
             """Based on the following documents, provide a concise answer to the question.
-
+            and Please provide the response in plain text with clear spacing, no tables or Markdown, and a conversational tone
             Documents:
             {docs}
 
