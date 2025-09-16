@@ -25,13 +25,11 @@ async def analyze_invoices(request: AnalyzeRequest):
         
         answer = result.get("answer", '''
                                             
-            I'd be happy to help, but I'm having a little trouble finding a specific answer. This usually happens for one of two reasons:
+            Whoops, my search came up empty! 😅
 
-                The question could be a bit more specific. Adding more detail helps me narrow down the search.
+To point me in the right direction, try asking with a bit more detail. Also, remember, I can only look for clues inside the data you've given me.
 
-                The answer might not be in the data you provided. I can only find information that is present in the context you've given me.
-
-            Could you try rephrasing your question with this in mind?
+Ready to ask again?
                                             
                             ''')
         table_df = result.get("table")
