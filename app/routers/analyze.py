@@ -25,9 +25,13 @@ async def analyze_invoices(request: AnalyzeRequest):
         
         answer = result.get("answer", '''
                                             
-                'I'd be happy to help with that! Could you tell me a little more about what you're looking for?
+            I'd be happy to help, but I'm having a little trouble finding a specific answer. This usually happens for one of two reasons:
 
-                Adding a few more details will help me find the best answer for you.
+                The question could be a bit more specific. Adding more detail helps me narrow down the search.
+
+                The answer might not be in the data you provided. I can only find information that is present in the context you've given me.
+
+            Could you try rephrasing your question with this in mind?
                                             
                             ''')
         table_df = result.get("table")
