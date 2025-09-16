@@ -23,7 +23,13 @@ async def analyze_invoices(request: AnalyzeRequest):
     try:
         result = session_data.agent.invoke({"question": request.question})
         
-        answer = result.get("answer", "No relevant information found.")
+        answer = result.get("answer", '''
+                                            
+                'I'd be happy to help with that! Could you tell me a little more about what you're looking for?
+
+                Adding a few more details will help me find the best answer for you.
+                                            
+                            ''')
         table_df = result.get("table")
         graph_fig = result.get("graph_fig")
         
